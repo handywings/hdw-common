@@ -30,7 +30,7 @@
     </build>
     <packaging>jar</packaging>
 
-    <name>Arithmetic Library for Tutorial</name>
+    <name>Hdw-common Library for Tutorial</name>
     <description>This is a sample library for a tutorial about
         publishing to Maven Central
     </description>
@@ -105,8 +105,8 @@
     </distributionManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/handywings/hdw-common</connection>
-        <developerConnection>scm:git:ssh://github.com/handywings/hdw-common</developerConnection>
+        <connection>scm:git:git://github.com/handywings/hdw-common.git</connection>
+        <developerConnection>scm:git:ssh://github.com/handywings/hdw-common.git</developerConnection>
         <url>http://github.com/handywings/hdw-common</url>
     </scm>
 
