@@ -2,16 +2,27 @@ package com.hdw.erp.common.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hdw.erp.common.ApplicationConstant;
 import com.hdw.erp.common.dto.config.StatusDto;
 
 public class ERPBaseDto {
 	private Long recorder;
+	
+	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1 , timezone = ApplicationConstant.ERP_TIMEZONE)
 	private Date createDate;
+	
 	private Long editor;
+	
+	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1 , timezone = ApplicationConstant.ERP_TIMEZONE)
 	private Date lastUpdate;
+	
 	private String recorderType;
+	
 	private String editorType;
+	
 	private String activeFlag;
+	
 	private StatusDto statusDto;
 	
 	public Long getRecorder() {

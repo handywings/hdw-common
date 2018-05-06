@@ -12,6 +12,7 @@ public class DepartmentCategoryDto extends ERPBaseDto{
 	private String departmentCategoryNameTH;
 	private Long departmentCategoryParent;
 	private String departmentCategoryParentName;
+	private String departmentCategoryDescription;
 	private int level;
 	private DepartmentCategoryDto departmentCategoryParentDto;
 	private List<DepartmentCategoryDto> departmentCategoryDtoList = new ArrayList<DepartmentCategoryDto>();
@@ -69,5 +70,11 @@ public class DepartmentCategoryDto extends ERPBaseDto{
 	}
 	public void setDepartmentCategoryParentDto(DepartmentCategoryDto departmentCategoryParentDto) {
 		this.departmentCategoryParentDto = departmentCategoryParentDto;
+	}
+	public String getDepartmentCategoryDescription() {
+		return departmentCategoryDescription;
+	}
+	public void setDepartmentCategoryDescription(String departmentCategoryDescription) {
+		this.departmentCategoryDescription = departmentCategoryDescription;
 	}
 }

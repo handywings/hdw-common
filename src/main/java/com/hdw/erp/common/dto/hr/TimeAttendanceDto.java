@@ -6,6 +6,7 @@ import com.hdw.erp.common.dto.ERPBaseDto;
 import com.hdw.erp.common.dto.config.FileDto;
 
 public class TimeAttendanceDto extends ERPBaseDto {
+	private Long id;
 	// รูปภาพใบหน้าพนักงาน
 	private FileDto image;
 	// วันเวลาเข้างาน
@@ -28,6 +29,14 @@ public class TimeAttendanceDto extends ERPBaseDto {
 	// จำนวนเวลาที่ออกงานก่อนกำหนด
 	private int hourBefore;
 	private int minuteBefore;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Timestamp getTimeIn() {
 		return timeIn;

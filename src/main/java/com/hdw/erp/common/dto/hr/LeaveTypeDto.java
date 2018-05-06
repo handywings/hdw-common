@@ -11,8 +11,6 @@ public class LeaveTypeDto extends ERPBaseDto {
 	private String leaveTypeNameTH;
 	// ชื่อประเภทการลา (ภาษาอังกฤษ)
 	private String leaveTypeNameEN;
-	// จำนวนวันที่อนุญาตลา
-	private int limitDayLeave;
 	// รายละเอียดและคำอธิบายเพิ่มเติม
 	private String leaveTypeDescription;
 	
@@ -41,12 +39,6 @@ public class LeaveTypeDto extends ERPBaseDto {
 	}
 	public void setLeaveTypeNameEN(String leaveTypeNameEN) {
 		this.leaveTypeNameEN = leaveTypeNameEN;
-	}
-	public int getLimitDayLeave() {
-		return limitDayLeave;
-	}
-	public void setLimitDayLeave(int limitDayLeave) {
-		this.limitDayLeave = limitDayLeave;
 	}
 	public String getLeaveTypeDescription() {
 		return leaveTypeDescription;

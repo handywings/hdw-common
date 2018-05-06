@@ -15,8 +15,14 @@ public class LeaveGroupDto extends ERPBaseDto {
 	// คำอธิบายกลุ่ม
 	private String leaveGroupDetail;
 	// เงื่อนไขการลาในแต่ละประเภท
-	private List<LeaveTypeDto> leaveType;
+	private List<LeaveGroupTypeDto> leaveGroupType;
 	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public int getLeaveGroupId() {
 		return leaveGroupId;
 	}
@@ -41,16 +47,10 @@ public class LeaveGroupDto extends ERPBaseDto {
 	public void setLeaveGroupDetail(String leaveGroupDetail) {
 		this.leaveGroupDetail = leaveGroupDetail;
 	}
-	public List<LeaveTypeDto> getLeaveType() {
-		return leaveType;
+	public List<LeaveGroupTypeDto> getLeaveGroupType() {
+		return leaveGroupType;
 	}
-	public void setLeaveType(List<LeaveTypeDto> leaveType) {
-		this.leaveType = leaveType;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setLeaveGroupType(List<LeaveGroupTypeDto> leaveGroupType) {
+		this.leaveGroupType = leaveGroupType;
 	}
 }

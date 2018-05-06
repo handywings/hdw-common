@@ -40,7 +40,7 @@ public class PersonnelEmploymentDto extends DocumentDto {
 	// ประวัติการเลื่อนตำแหน่ง ย้ายสาขา และปรับฐานเงินเดือน
 	private List<EmploymentAndPositionRecordDto> employmentAndPositionList;
 	// สถานะการทำงาน (ปกติ, พักงานชั่วคราว, ลาออก, เชิญออก, ไล่ออก)
-	private String workStatus;
+	private PersonnelWorkStatusDto workStatus;
 	// สถานะการฝึกงาน (ไม่ต้องทดลองงาน, ผ่านการทดลองงานแล้ว, ยังไม่ผ่านการทดลองงาน,
 	// กำลังทดลองงาน)
 	private String statusOfInternships;
@@ -52,6 +52,8 @@ public class PersonnelEmploymentDto extends DocumentDto {
 	private boolean isEnable;
 	// หมายเหตุ / บันทึกเพิ่มเติม
 	private String note;
+	
+	List<TimeAttendanceDto> timeAttendanceList;
 	
 	public Long getId() {
 		return id;
@@ -143,10 +145,10 @@ public class PersonnelEmploymentDto extends DocumentDto {
 	public void setEmploymentAndPositionList(List<EmploymentAndPositionRecordDto> employmentAndPositionList) {
 		this.employmentAndPositionList = employmentAndPositionList;
 	}
-	public String getWorkStatus() {
+	public PersonnelWorkStatusDto getWorkStatus() {
 		return workStatus;
 	}
-	public void setWorkStatus(String workStatus) {
+	public void setWorkStatus(PersonnelWorkStatusDto workStatus) {
 		this.workStatus = workStatus;
 	}
 	public String getStatusOfInternships() {
@@ -178,5 +180,11 @@ public class PersonnelEmploymentDto extends DocumentDto {
 	}
 	public void setNote(String note) {
 		this.note = note;
+	}
+	public List<TimeAttendanceDto> getTimeAttendanceList() {
+		return timeAttendanceList;
+	}
+	public void setTimeAttendanceList(List<TimeAttendanceDto> timeAttendanceList) {
+		this.timeAttendanceList = timeAttendanceList;
 	}
 }

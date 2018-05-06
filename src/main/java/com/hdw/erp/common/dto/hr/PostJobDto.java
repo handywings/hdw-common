@@ -2,17 +2,15 @@ package com.hdw.erp.common.dto.hr;
 
 import java.sql.Date;
 import java.util.List;
-import java.util.Vector;
 
 import com.hdw.erp.common.dto.config.DocumentDto;
 import com.hdw.erp.common.dto.config.FileDto;
 import com.hdw.erp.common.dto.crm.SearchEngineOptimizationDto;
-import com.hdw.erp.common.dto.org.OrganizationDto;
 import com.hdw.erp.common.dto.org.PositionDto;
 
 public class PostJobDto extends DocumentDto {
 	// รหัสตำแหน่งงาน
-	private long postJobId;
+	private Long postJobId;
 	// หมายเลขตำแหน่งงาน
 	private String postJobNumber;
 	// รูปภาพหลัก
@@ -23,10 +21,10 @@ public class PostJobDto extends DocumentDto {
 	private String postJobTopicEN;
 	// ตำแหน่งที่เปิดรับสมัคร
 	private PositionDto position;
-	// รายการบริษัทที่เปิดรับ
-	private List<OrganizationDto> organizationList;
-	// อัตราตำแหน่ง
-	private int numberPosition;
+	// รายการบริษัทและอัตรากำลังที่เปิดรับสมัคร
+	private List<ManpowerDto> manpowerList;
+	// อัตราตำแหน่งรวมทั้งสิ้น
+	private int numberOfAllManpower;
 	// เงินเดือนเริ่มต้น
 	private double salaryStart;
 	// เงินเดือนขั้นสุด
@@ -44,9 +42,9 @@ public class PostJobDto extends DocumentDto {
 	// รายละเอียดประกาศ (ภาษาอังกฤษ)
 	private String detail_EN;
 	// รายการรูปภาพประชาสัมพันธ์
-	private Vector<FileDto> imageList;
+	private List<FileDto> imageList;
 	// รายการไฟล์เอกสารอ้างอิง
-	private Vector<FileDto> documentList;
+	private List<FileDto> documentList;
 	// วันเริ่มต้นเปิดการรับสมัคร
 	private Date publishStartDate;
 	// สถานะการประกาศเผยแพร่ใน Facebook
@@ -56,10 +54,13 @@ public class PostJobDto extends DocumentDto {
 	// สถิติเกี่ยวกับประกาศข่าวที่สำคัญ
 	private PostJobStatisticDto statistic;
 	
-	public long getPostJobId() {
+	public Long getPostJobId() {
+		if(postJobId == null){
+			postJobId = 0L;
+		}
 		return postJobId;
 	}
-	public void setPostJobId(long postJobId) {
+	public void setPostJobId(Long postJobId) {
 		this.postJobId = postJobId;
 	}
 	public String getPostJobNumber() {
@@ -92,17 +93,17 @@ public class PostJobDto extends DocumentDto {
 	public void setPosition(PositionDto position) {
 		this.position = position;
 	}
-	public List<OrganizationDto> getOrganizationList() {
-		return organizationList;
+	public List<ManpowerDto> getManpowerList() {
+		return manpowerList;
 	}
-	public void setOrganizationList(List<OrganizationDto> organizationList) {
-		this.organizationList = organizationList;
+	public void setManpowerList(List<ManpowerDto> manpowerList) {
+		this.manpowerList = manpowerList;
 	}
-	public int getNumberPosition() {
-		return numberPosition;
+	public int getNumberOfAllManpower() {
+		return numberOfAllManpower;
 	}
-	public void setNumberPosition(int numberPosition) {
-		this.numberPosition = numberPosition;
+	public void setNumberOfAllManpower(int numberOfAllManpower) {
+		this.numberOfAllManpower = numberOfAllManpower;
 	}
 	public double getSalaryStart() {
 		return salaryStart;
@@ -152,16 +153,16 @@ public class PostJobDto extends DocumentDto {
 	public void setDetail_EN(String detail_EN) {
 		this.detail_EN = detail_EN;
 	}
-	public Vector<FileDto> getImageList() {
+	public List<FileDto> getImageList() {
 		return imageList;
 	}
-	public void setImageList(Vector<FileDto> imageList) {
+	public void setImageList(List<FileDto> imageList) {
 		this.imageList = imageList;
 	}
-	public Vector<FileDto> getDocumentList() {
+	public List<FileDto> getDocumentList() {
 		return documentList;
 	}
-	public void setDocumentList(Vector<FileDto> documentList) {
+	public void setDocumentList(List<FileDto> documentList) {
 		this.documentList = documentList;
 	}
 	public Date getPublishStartDate() {

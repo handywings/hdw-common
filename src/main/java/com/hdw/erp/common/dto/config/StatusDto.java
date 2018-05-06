@@ -4,7 +4,7 @@ import com.hdw.erp.common.dto.ERPBaseDto;
 
 public class StatusDto extends ERPBaseDto {
 	// รหัสสถานะ
-	private int statusId;
+	private Long statusId;
 	// ชื่อสถานะ
 	private String statusName;
 	// คำอธิบายสถานะ
@@ -16,11 +16,13 @@ public class StatusDto extends ERPBaseDto {
 	// module
 	private ModuleDto module;
 
-	public int getStatusId() {
+	
+
+	public Long getStatusId() {
 		return statusId;
 	}
 
-	public void setStatusId(int statusId) {
+	public void setStatusId(Long statusId) {
 		this.statusId = statusId;
 	}
 

@@ -12,6 +12,8 @@ public class PersonnelDto extends ERPBaseDto {
 	private String personnelNumber;
 	// QRCODE
 	private String qrcode;
+	// pincode
+	private String pinCode;
 	// ข้อมูลบุคคล
 	private PersonRecordDto person;
 	// ข้อมูลการว่าจ้าง (Personnel Employment)
@@ -98,5 +100,13 @@ public class PersonnelDto extends ERPBaseDto {
 
 	public void setWorkmanship(List<WorkmanshipDto> workmanship) {
 		this.workmanship = workmanship;
+	}
+
+	public String getPinCode() {
+		return pinCode;
+	}
+
+	public void setPinCode(String pinCode) {
+		this.pinCode = pinCode;
 	}
 }

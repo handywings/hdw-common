@@ -3,6 +3,7 @@ package com.hdw.erp.common.dto.config;
 import com.hdw.erp.common.dto.ERPBaseDto;
 
 public class DocumentTypeDto extends ERPBaseDto {
+	private Long documentTypeId;
 	// ชื่อประเภทเอกสาร (ภาษาไทย)
 	private String documentTypeNameTH;
 	// ชื่อประเภทเอกสาร (ภาษาอังกฤษ)
@@ -42,5 +43,16 @@ public class DocumentTypeDto extends ERPBaseDto {
 
 	public void setModule(ModuleDto module) {
 		this.module = module;
+	}
+
+	public Long getDocumentTypeId() {
+		if(documentTypeId == null){
+			documentTypeId = 0L;
+		}
+		return documentTypeId;
+	}
+
+	public void setDocumentTypeId(Long documentTypeId) {
+		this.documentTypeId = documentTypeId;
 	}
 }

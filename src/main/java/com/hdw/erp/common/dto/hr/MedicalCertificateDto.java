@@ -6,6 +6,7 @@ import com.hdw.erp.common.dto.config.DocumentDto;
 import com.hdw.erp.common.dto.config.FileDto;
 
 public class MedicalCertificateDto extends DocumentDto {
+	private Long id;
 	// ประเภทใบรับรองแพทย์ (เข้ารับการตรวจ / เข้ารับการรักษาในโรงพยาบาล)
 	private String medicalCertificateType;
 	// สถานพยาบาล
@@ -115,5 +116,13 @@ public class MedicalCertificateDto extends DocumentDto {
 
 	public void setDocument(FileDto document) {
 		this.document = document;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

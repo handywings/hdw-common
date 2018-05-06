@@ -7,6 +7,7 @@ import com.hdw.erp.common.dto.config.DocumentDto;
 import com.hdw.erp.common.dto.config.FileDto;
 
 public class LeaveDocumentDto extends DocumentDto {
+	private Long id;
 	// ประเภทการลา
 	private LeaveTypeDto leaveType;
 	// เหตุผลการลา
@@ -29,6 +30,10 @@ public class LeaveDocumentDto extends DocumentDto {
 	private List<FileDto> documentList;
 	// การลาเกิดขึ้นภายใต้สัญญาว่าจ้างใด
 	private PersonnelEmploymentDto personnelEmployment;
+	
+	
+	//Added
+	private PersonnelDto personnelDto;
 	
 	public LeaveTypeDto getLeaveType() {
 		return leaveType;
@@ -95,5 +100,17 @@ public class LeaveDocumentDto extends DocumentDto {
 	}
 	public void setPersonnelEmployment(PersonnelEmploymentDto personnelEmployment) {
 		this.personnelEmployment = personnelEmployment;
+	}
+	public PersonnelDto getPersonnelDto() {
+		return personnelDto;
+	}
+	public void setPersonnelDto(PersonnelDto personnelDto) {
+		this.personnelDto = personnelDto;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

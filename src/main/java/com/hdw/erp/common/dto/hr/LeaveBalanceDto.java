@@ -13,6 +13,9 @@ public class LeaveBalanceDto extends ERPBaseDto {
 	// นาทีลาคงเหลือ
 	private int minuteBalance;
 
+	//Added 
+	private Long personnelEmploymentId;
+	
 	public LeaveTypeDto getLeaveType() {
 		return leaveType;
 	}
@@ -51,5 +54,13 @@ public class LeaveBalanceDto extends ERPBaseDto {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public Long getPersonnelEmploymentId() {
+		return personnelEmploymentId;
+	}
+
+	public void setPersonnelEmploymentId(Long personnelEmploymentId) {
+		this.personnelEmploymentId = personnelEmploymentId;
 	}
 }

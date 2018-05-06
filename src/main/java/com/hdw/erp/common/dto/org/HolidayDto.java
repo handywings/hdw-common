@@ -7,7 +7,7 @@ import com.hdw.erp.common.dto.ERPBaseDto;
 public class HolidayDto extends ERPBaseDto {
 	private Long id;
 	// ประเภทวันหยุด (วันหยุดประจำปี / วันหยุดพิเศษของบริษัท)
-	private String holidayType;
+	private HolidayTypeDto holidayType;
 	// หัวข้อวันหยุด
 	private String holidayTopicTH;
 	// หัวข้อวันหยุด
@@ -30,11 +30,11 @@ public class HolidayDto extends ERPBaseDto {
 		this.id = id;
 	}
 
-	public String getHolidayType() {
+	public HolidayTypeDto getHolidayType() {
 		return holidayType;
 	}
 
-	public void setHolidayType(String holidayType) {
+	public void setHolidayType(HolidayTypeDto holidayType) {
 		this.holidayType = holidayType;
 	}
 
