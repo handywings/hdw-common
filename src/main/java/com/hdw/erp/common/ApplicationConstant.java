@@ -12,6 +12,7 @@ public class ApplicationConstant {
 	//date format
 	public static final String DATE_FORMAT1 = "yyyy-MM-dd HH:mm:ss";
 	public static final String ERP_TIMEZONE = "Asia/Bangkok";
+	public static final String ERP_LOCALE = "en";
 	//seo
 	public static final String SEO_KEY_WORD_SEPERATOR = ",";
 }

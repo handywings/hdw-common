@@ -9,12 +9,12 @@ import com.hdw.erp.common.dto.config.StatusDto;
 public class ERPBaseDto {
 	private Long recorder;
 	
-	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1 , timezone = ApplicationConstant.ERP_TIMEZONE)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = ApplicationConstant.DATE_FORMAT1 , locale = ApplicationConstant.ERP_LOCALE, timezone = ApplicationConstant.ERP_TIMEZONE)
 	private Date createDate;
 	
 	private Long editor;
 	
-	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1 , timezone = ApplicationConstant.ERP_TIMEZONE)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = ApplicationConstant.DATE_FORMAT1 , locale = ApplicationConstant.ERP_LOCALE, timezone = ApplicationConstant.ERP_TIMEZONE)
 	private Date lastUpdate;
 	
 	private String recorderType;

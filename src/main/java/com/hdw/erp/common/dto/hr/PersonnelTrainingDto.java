@@ -1,9 +1,5 @@
 package com.hdw.erp.common.dto.hr;
 
-import java.sql.Timestamp;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.hdw.erp.common.ApplicationConstant;
 import com.hdw.erp.common.dto.ERPBaseDto;
 import com.hdw.erp.common.dto.config.FileDto;
 
@@ -25,11 +21,9 @@ public class PersonnelTrainingDto extends ERPBaseDto {
 	// ได้รับวุฒิบัตรหรือไม่ T / F
 	private boolean hasCertificate;
 	// ช่วงวันเวลาเริ่มต้น
-	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1 , timezone = ApplicationConstant.ERP_TIMEZONE)
-	private Timestamp trainingDateStart;
+	private String trainingDateStart;
 	// ช่วงวันเวลาสิ้นสุด
-	@JsonFormat(pattern = ApplicationConstant.DATE_FORMAT1, timezone = ApplicationConstant.ERP_TIMEZONE)
-	private Timestamp trainingDateEnd;
+	private String trainingDateEnd;
 	// คำอธิบายเพิ่มเติม
 	private String note;
 	// ไฟล์แนป
@@ -81,16 +75,16 @@ public class PersonnelTrainingDto extends ERPBaseDto {
 	public void setHasCertificate(boolean hasCertificate) {
 		this.hasCertificate = hasCertificate;
 	}
-	public Timestamp getTrainingDateStart() {
+	public String getTrainingDateStart() {
 		return trainingDateStart;
 	}
-	public void setTrainingDateStart(Timestamp trainingDateStart) {
+	public void setTrainingDateStart(String trainingDateStart) {
 		this.trainingDateStart = trainingDateStart;
 	}
-	public Timestamp getTrainingDateEnd() {
+	public String getTrainingDateEnd() {
 		return trainingDateEnd;
 	}
-	public void setTrainingDateEnd(Timestamp trainingDateEnd) {
+	public void setTrainingDateEnd(String trainingDateEnd) {
 		this.trainingDateEnd = trainingDateEnd;
 	}
 	public String getNote() {

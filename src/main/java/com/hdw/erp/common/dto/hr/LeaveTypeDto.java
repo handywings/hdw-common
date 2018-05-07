@@ -4,7 +4,7 @@ import com.hdw.erp.common.dto.ERPBaseDto;
 
 public class LeaveTypeDto extends ERPBaseDto {
 	// รหัสประเภทการลา
-	private Long leaveTypeId;
+	private Long id;
 	
 	private String leaveTypeNameCode;
 	// ชื่อประเภทการลา (ภาษาไทย)
@@ -16,11 +16,12 @@ public class LeaveTypeDto extends ERPBaseDto {
 	
 	private String activeFlag;
 	
-	public Long getLeaveTypeId() {
-		return leaveTypeId;
+	
+	public Long getId() {
+		return id;
 	}
-	public void setLeaveTypeId(Long leaveTypeId) {
-		this.leaveTypeId = leaveTypeId;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public String getLeaveTypeNameCode() {
 		return leaveTypeNameCode;

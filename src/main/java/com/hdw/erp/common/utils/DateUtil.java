@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import com.hdw.erp.common.ApplicationConstant;
+
 public class DateUtil {
 	public static final Locale US = new Locale("en", "US");
 	public static final Locale TH = new Locale("th", "TH");
@@ -511,5 +513,34 @@ public class DateUtil {
         cal.setTime(date);
         return cal.get(Calendar.MONTH);
     }
+    
+    public static Timestamp covertStringToTimeStamp(String ceString){
+    	Date date;
+    	Timestamp timestamp = null;
+		try {
+			date = convertStringToDate(ceString, ApplicationConstant.DATE_FORMAT1, new Locale("en", "US"));
+			timestamp = new Timestamp(date.getTime());
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+    	return timestamp;
+    }
+    
+    public static synchronized String covertTimeStampToString(Timestamp timestamp) {
+		try {
+			TimeZone.setDefault(TimeZone.getTimeZone("Asia/Bangkok"));
+			String date_str = "";
+			if (timestamp != null) {
+				SimpleDateFormat simple_date = new SimpleDateFormat(
+						ApplicationConstant.DATE_FORMAT1,
+						new Locale("en", "EN"));
+				date_str = simple_date.format(timestamp);
+			}
+			return date_str;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return "-";		
+	}
 }
 
