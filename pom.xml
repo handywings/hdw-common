@@ -4,7 +4,7 @@
 
     <groupId>com.github.handywings</groupId>
     <artifactId>hdw-common</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <build>
         <plugins>
             <plugin>
